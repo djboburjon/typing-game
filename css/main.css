@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to left top,
+    rgba(76, 218, 254, 1) 60%,
+    rgba(192, 20, 218, 1) 100%
+  );
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 80px 100px;
+}
+
+.main {
+  position: relative;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
+}
+
+.top {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user,
+.result {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+#level {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 2px;
+  width: 100px;
+  outline: none;
+}
+
+.result {
+  text-align: end;
+}
+
+.middle {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.rWord {
+  margin-bottom: 50px;
+}
+
+.wInput {
+  padding: 10px 8px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  width: 18rem;
+}
+
+.bottom {
+  text-align: center;
+}
+
+/* Game Over */
+
+.gameOver {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(
+    to top right,
+    rgba(192, 20, 218, 1) 0%,
+    rgb(240, 164, 24) 50%,
+    rgba(76, 218, 254, 1) 100%
+  );
+  width: 40%;
+  border-radius: 8px;
+  box-shadow: 0px 0px 25px 10px rgba(255, 255, 255, 0.94);
+}
+
+.gameOver.active {
+  display: block;
+}
+
+.gameOver h1 {
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  background: linear-gradient(
+    to top right,
+    rgba(76, 218, 254, 1) 0%,
+    rgb(240, 164, 24) 50%,
+    rgba(192, 20, 218, 1) 100%
+  );
+  display: inline-block;
+  border-radius: 25px;
+  font-size: 26px;
+  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.94);
+}
+.finalResult {
+  margin-bottom: 40px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.94);
+}
+
+.again {
+  background: black;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.again a {
+  padding: 14px 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}

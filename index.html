@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Word</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <div class="top">
+          <div class="user">
+            Boburbek <br />
+            Dadajonov
+          </div>
+          <select id="level">
+            <option value="easy">Easy</option>
+            <option value="normal">Normal</option>
+            <option value="hard">Hard</option>
+          </select>
+          <div class="result">
+            <div>Score: <span class="score">0</span></div>
+            <div>HighScore: <span class="hScore">0</span></div>
+          </div>
+        </div>
+        <div class="middle">
+          <h1 class="rWord"></h1>
+          <form>
+            <input class="wInput" type="text" placeholder="Enter the word..." />
+          </form>
+        </div>
+        <div class="bottom">
+          <h1>time: <span class="time">10</span></h1>
+        </div>
+        <div class="gameOver">
+          <h1>Game Over</h1>
+          <div class="finalResult">
+            Your result: <span class="finalResultIndex">0</span>
+          </div>
+          <button class="again"><a href="">TRY AGAIN</a></button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/main.js"></script>
+</html>
