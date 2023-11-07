@@ -37,6 +37,16 @@ var num = 0
 
 var gameTime = 10
 
+var hScore = localStorage.getItem("highScore") ? localStorage.getItem("highScore") : 0;
+
+select.value = localStorage.getItem("selectValue") ? localStorage.getItem("selectValue") : "easy"
+
+localStorage.setItem("selectValue", select.value)
+
+select.addEventListener("change", ()=> {
+  localStorage.setItem("selectValue", select.value)
+})
+
 const writeText = ()=> {
   var index = Math.floor(Math.random() * words.length)
   randomText = words[index]
@@ -71,7 +81,7 @@ input.addEventListener("input", ()=> {
       <span class="addTime">+2</span>
       `
     }
-    
+
   }
 })
 
@@ -79,6 +89,10 @@ const interval = setInterval(() => {
   
   if (gameTime == 0) {
     clearInterval(interval)
+    if (num > hScore) {
+      localStorage.setItem("highScore", num)
+      hScore = localStorage.getItem("highScore")
+    }
     gameOver.classList.add("active")
     finalResultIndex.textContent = num
   } else {
@@ -88,3 +102,7 @@ const interval = setInterval(() => {
     
   }
 }, 1000);
+
+
+highScore.textContent = hScore
+
