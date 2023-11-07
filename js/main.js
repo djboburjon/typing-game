@@ -52,6 +52,29 @@ input.addEventListener("input", ()=> {
     input.value = ""
     num++
     score.textContent = num
+
+    if (select.value == "easy") {
+      var levelE = gameTime + 5
+      gameTime = levelE
+      time.innerHTML += `
+        <span class="addTime">+5</span>
+      `
+    }
+    if (select.value == "normal") {
+      var levelN = gameTime + 3
+      gameTime = levelN
+      time.innerHTML += `
+      <span class="addTime">+3</span>
+      `
+    }
+    if (select.value == "hard") {
+      var levelH = gameTime + 2
+      gameTime = levelH
+      time.innerHTML += `
+      <span class="addTime">+2</span>
+      `
+    }
+    
   }
 })
 
