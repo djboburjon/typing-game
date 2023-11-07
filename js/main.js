@@ -53,23 +53,20 @@ input.addEventListener("input", ()=> {
     num++
     score.textContent = num
 
-    if (select.value == "easy") {
-      var levelE = gameTime + 5
-      gameTime = levelE
+    var level = select.value
+
+    if (level == "easy") {
+      gameTime += 5
       time.innerHTML += `
         <span class="addTime">+5</span>
       `
-    }
-    if (select.value == "normal") {
-      var levelN = gameTime + 3
-      gameTime = levelN
+    } else if (level == "normal") {
+      gameTime += 3
       time.innerHTML += `
       <span class="addTime">+3</span>
       `
-    }
-    if (select.value == "hard") {
-      var levelH = gameTime + 2
-      gameTime = levelH
+    } else {
+      gameTime += 2
       time.innerHTML += `
       <span class="addTime">+2</span>
       `
